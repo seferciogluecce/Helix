@@ -64,6 +64,7 @@ public class WalkingOnHelix : MonoBehaviour
         Angle += GMH.PointCount * GMH.DegreeIncerement * Mathf.Deg2Rad * speed * Direction * Time.deltaTime;
         if (Angle > AngleLimit || Angle < -AngleLimit) //when the angle limit is exceeded direction is changed
         {
+            Angle -= GMH.PointCount * GMH.DegreeIncerement * Mathf.Deg2Rad * speed * Direction * Time.deltaTime;
             Direction = -Direction;
         }
     }
